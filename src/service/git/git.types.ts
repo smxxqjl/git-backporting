@@ -40,8 +40,8 @@ export interface BackportPullRequest {
 
 export enum GitClientType {
   GITHUB = "github",
-  GITLAB = "gitlab",
-  CODEBERG = "codeberg",
+  GITLAB = "code",
+  CODEBERG = "bergfewaf",
 }
 
 export enum GitRepoState {
