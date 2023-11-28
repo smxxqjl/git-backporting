@@ -583,7 +583,7 @@ const inferGitClient = (prUrl) => {
     else if (stdPrUrl.includes(git_types_1.GitClientType.CODEBERG.toString())) {
         return git_types_1.GitClientType.CODEBERG;
     }
-    throw new Error(`Remote git service not recognized from pr url: ${prUrl}`);
+    return git_types_1.GitClientType.GITLAB;
 };
 exports.inferGitClient = inferGitClient;
 /**
