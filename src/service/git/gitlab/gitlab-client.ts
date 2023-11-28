@@ -43,6 +43,7 @@ export default class GitLabClient implements GitClient {
   // example: <host>/api/v4/projects/<namespace>%2Fbackporting-example/merge_requests/1
   async getPullRequest(namespace: string, repo: string, mrNumber: number, squash = true): Promise<GitPullRequest> {
     const projectId = this.getProjectId(namespace, repo);
+    this.logger.info(`/projects/${projectId}/merge_requests/${mrNumber}`);
     const { data } = await this.client.get(`/projects/${projectId}/merge_requests/${mrNumber}`);
 
     const commits: string[] = [];
